@@ -1,4 +1,4 @@
-# AIM : 4-bit Carry Save Multiplier RTL to GDS
+# AIM : 4-bit Carry Save Multiplier implementation on fpga
 # Appratus : pc , vivado z board 
 # Introduction
 This project presents the RTL-to-GDSII design flow of a 4-bit Carry Save Multiplier
