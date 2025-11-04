@@ -5,11 +5,6 @@ This project presents the RTL-to-GDSII design flow of a 4-bit Carry Save Multipl
 (CSM). The objective is to design, verify, synthesize, and implement the multiplier on
 FPGA and ASIC platforms. The design was verified in Vivado, simulated using behavioral
 testbenches, and synthesized for hardware implementation.
-# Introduction
-This project presents the RTL-to-GDSII design flow of a 4-bit Carry Save Multiplier
-(CSM). The objective is to design, verify, synthesize, and implement the multiplier on
-FPGA and ASIC platforms. The design was verified in Vivado, simulated using behavioral
-testbenches, and synthesized for hardware implementation.
 #  Design Flow
 The steps followed for the 4-bit Carry Save Multiplier are:
 1. RTL design using Verilog HDL.
