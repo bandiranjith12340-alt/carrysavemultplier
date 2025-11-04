@@ -19,36 +19,32 @@ The steps followed for the 4-bit Carry Save Multiplier are:
 5. Physical layout (place & route) and generation of GDSII
 # . RTL Design (Source Code)
    The Verilog source code for the 4-bit Carry Save Multiplier is given below:
-   module carry_save_multiplier_4bit (
-2 input [3:0] A ,
-3 input [3:0] B ,
-4 output [7:0] P
-5 ) ;
-6 wire [3:0] pp0 , pp1 , pp2 , pp3 ;
-7 wire [7:0] s1 , s2 , s3 ;
-8
-9 // Partial Products
-10 assign pp0 = A & {4{ B [0]}};
-11 assign pp1 = A & {4{ B [1]}};
-12 assign pp2 = A & {4{ B [2]}};
-13 assign pp3 = A & {4{ B [3]}};
-14
-15 // Align partial products
-16 assign s1 = {4 ’ b0 , pp0 };
-17 assign s2 = {3 ’ b0 , pp1 , 1 ’ b0 };
-3
-18 assign s3 = {2 ’ b0 , pp2 , 2 ’ b0 };
-19 wire [7:0] pp4 = {1 ’ b0 , pp3 , 3 ’ b0 };
-20
-21 // Stage - wise addition
-22 wire [7:0] sum1 , sum2 , sum3 , carry1 , carry2 , carry3 ;
-23 assign { carry1 , sum1 } = s1 + s2 ;
-24 assign { carry2 , sum2 } = sum1 + s3 ;
-25 assign { carry3 , sum3 } = sum2 + pp4 ;
-26
-27 // Final output
-28 assign P = sum3 + carry3 ;
-29 endmodule
-4. Testbench
-The testbench used for f
+   <img width="339" height="814" alt="image" src="https://github.com/user-attachments/assets/4ffc5ec7-0c9d-4e9a-b86c-883a7e557430" />
+# Testbench  
+<img width="578" height="435" alt="image" src="https://github.com/user-attachments/assets/71cf7b62-fded-4180-be5e-619f57bdaeb6" />
+# FPGA Pin Mapping (XDC Constraints)
+<img width="443" height="885" alt="image" src="https://github.com/user-attachments/assets/58496937-3c3f-454f-af30-6b94a6084def" />
+#  Simulation Results
+The simulation was performed in Vivado. The waveform below shows correct multiplication outputs.
+![WhatsApp Image 2025-10-30 at 13 01 42_6b9566de](https://github.com/user-attachments/assets/446f2638-ebd1-4647-a10f-bec7bdbd1d4c)
+
+# Schematic and Layout
+The synthesized RTL schematic and physical layout views are shown below.
+![WhatsApp Image 2025-10-30 at 12 58 50_b4e3e00c](https://github.com/user-attachments/assets/9a4e642a-a47c-4799-a312-4b71a7456269)
+
+![WhatsApp Image 2025-10-30 at 12 59 45_d35a5354](https://github.com/user-attachments/assets/d6c68617-a794-49fa-acdc-55788fd6c778)
+
+# FPGA Implementation
+The design was implemented on the Digilent ZedBoard FPGA. The product output is
+displayed on LEDs.
+![WhatsApp Image 2025-11-02 at 22 56 03_e5ef85c2](https://github.com/user-attachments/assets/90b44062-7e25-4cee-bc34-c96322a07f0f)
+# Results
+The 4-bit Carry Save Multiplier successfully computes partial products and sums them
+in a carry-save manner. Simulation and hardware outputs confirm correct operation.
+#  Conclusion
+The 4-bit Carry Save Multiplier was designed and implemented using Verilog HDL, verified through simulation, and realized on FPGA hardware. The design can be extended
+to 8-bit or 16-bit versions for higher performance.
+
+
+
 
