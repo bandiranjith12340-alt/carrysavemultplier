@@ -20,6 +20,8 @@ This project presents the FPGA-based implementation of a 4-bit Carry Save Multip
 
 #  Design Overview
 The 4-bit Carry Save Multiplier performs multiplication of two 4-bit binary numbers using partial product generation and carry-save addition. Instead of waiting for carry propagation at every stage, the carries are stored and added in the next stage, improving speed compared to ripple-carry designs.
+
+
    `  A3 A2 A1 A0
        ×
      B3 B2 B1 B0
