@@ -20,12 +20,12 @@ This project presents the FPGA-based implementation of a 4-bit Carry Save Multip
 
 #  Design Overview
 The 4-bit Carry Save Multiplier performs multiplication of two 4-bit binary numbers using partial product generation and carry-save addition. Instead of waiting for carry propagation at every stage, the carries are stored and added in the next stage, improving speed compared to ripple-carry designs.
-     A3 A2 A1 A0
+   `  A3 A2 A1 A0
        ×
      B3 B2 B1 B0
      ---------------
      Partial Products → Added Using Carry Save Adders
-     Final Sum + Carry → Final Product (8 bits)
+     Final Sum + Carry → Final Product (8 bits)`
  
 
 Internal Flow
@@ -367,6 +367,30 @@ Institution: Indian Institute of Information Technology Design and Manufacturing
 
 Academic Year: 2025–2026 (Semester 5)
 
+
+Institution: IIITDM Kurnool
+
+🌟 Acknowledgments
+
+This project was successfully completed under the valuable guidance and support of:
+
+Dr. P. Ranga Babu — Course Instructor & Project Guide, Department of ECE, IIITDM Kurnool
+
+IIITDM Kurnool — For providing laboratory access and computing infrastructure
+
+Cadence Design Systems — For access to EDA tools used in the design flow
+
+Open-Source and Research Community — For resources and literature support in multiplier design
+
+Peers and Faculty — For constant feedback during project development
+
+👨‍🎓 About the Developers
+
+Sevya Naik
+
+ranjith
+
+Department of Electronics and Communication Engineering Indian Institute of Information Technology Design and Manufacturing, Kurnool
 
 
 
