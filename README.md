@@ -102,6 +102,8 @@ The project was implemented using Verilog HDL in Xilinx Vivado. The structural d
 The simulation waveform confirms correct multiplication for all 4-bit input combinations. The layout and FPGA output validate the accuracy of the design. Below are the corresponding implementation results:
 
 Block Diagram of 4-bit Carry Save Multiplier
+<img width="1006" height="658" alt="image" src="https://github.com/user-attachments/assets/11dda585-81c7-4e49-b122-d55e26849214" />
+
 
 Figure 1;Schematic Diagram
 
